@@ -72,7 +72,7 @@ const Courses = () => {
 
     {/* Enrolled Courses Section */}
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+      <h2 className="text-2xl font-bold mb-6 text-gray-800 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text">
         Enrolled Courses
       </h2>
       {loading ? (
@@ -104,7 +104,7 @@ const Courses = () => {
 
     {/* Available Courses Section */}
     <section>
-      <h2 className="text-2xl font-bold mb-6 text-gray-800 bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">
+      <h2 className="text-2xl font-bold mb-6 text-gray-800 bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text">
         Available Courses
       </h2>
       {loading ? (
