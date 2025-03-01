@@ -31,12 +31,12 @@ const App = () => {
                   ? role === "admin"
                     ? "/admin/dashboard"
                     : "/student/dashboard"
-                  : "/login1"
+                  : "/login"
               }
             />
           }
         />
-        <Route path="/login1" element={user ? <Navigate to="/app" /> : <Login />} />
+        <Route path="/login" element={user ? <Navigate to="/app" /> : <Login />} />
         <Route
           path="/admin/dashboard"
           element={role === "admin" ? <AdminDashboard /> : <Navigate to="/app" />}
