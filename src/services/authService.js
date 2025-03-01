@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://backend-ruby-five-72.vercel.app/api/auth";
 
 export const signup = async (name, email, password, role) => {
   const res = await axios.post(`${API_URL}/signup`, { name, email, password, role });
