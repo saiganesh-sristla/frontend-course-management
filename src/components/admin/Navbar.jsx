@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-white">Course Management</h1>
+            <h1 className="text-xl font-bold text-white">Co-curriculam Course Management</h1>
           </div>
           
           {/* Desktop Navigation */}

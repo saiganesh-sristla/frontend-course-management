@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-500 p-4 text-white flex justify-between">
-      <h1 className="text-xl font-bold">Course Management</h1>
+      <h1 className="text-xl font-bold">Co-Curriculam Course Management</h1>
       <div className="flex space-x-4">
         {user ? (
           <>

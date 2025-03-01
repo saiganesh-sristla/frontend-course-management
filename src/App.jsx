@@ -13,6 +13,7 @@ import EnrolledStudents from "./pages/EnrolledStudents";
 import AddStudent from "./pages/AddStudent";
 import AddCourse from "./pages/AddCourse";
 import AttendancePage from "./pages/AttendancePage";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   const { user, role } = useAuthStore();
@@ -20,8 +21,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<HomePage/>}/>
         <Route
-          path="/"
+          path="/app"
           element={
             <Navigate
               to={
@@ -34,15 +36,15 @@ const App = () => {
             />
           }
         />
-        <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+        <Route path="/login" element={user ? <Navigate to="/app" /> : <Login />} />
         <Route
           path="/admin/dashboard"
-          element={role === "admin" ? <AdminDashboard /> : <Navigate to="/" />}
+          element={role === "admin" ? <AdminDashboard /> : <Navigate to="/app" />}
         />
         <Route
           path="/student/dashboard"
           element={
-            role === "student" ? <StudentDashboard /> : <Navigate to="/" />
+            role === "student" ? <StudentDashboard /> : <Navigate to="/app" />
           }
         />
         <Route path="/student/course/:id" element={<CourseDetails />} />
