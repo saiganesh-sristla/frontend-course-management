@@ -13,7 +13,7 @@ const Courses = () => {
     const fetchData = async () => {
       try {
         const resCourses = await axios.get(
-          "http://localhost:5000/api/courses/all",
+          "https://backend-ruby-five-72.vercel.app/api/courses/all",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -30,7 +30,7 @@ const Courses = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this course?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/courses/delete/${id}`, {
+      await axios.delete(`https://backend-ruby-five-72.vercel.app/api/courses/delete/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCourses(courses.filter((course) => course._id !== id));

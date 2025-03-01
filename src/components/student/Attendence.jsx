@@ -11,7 +11,7 @@ const Attendance = () => {
     const fetchAttendance = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/attendance/my-attendance",
+          "https://backend-ruby-five-72.vercel.app/api/attendance/my-attendance",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -30,7 +30,7 @@ const Attendance = () => {
   const markAttendance = async (courseId) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/attendance/mark",
+        "https://backend-ruby-five-72.vercel.app/api/attendance/mark",
         { courseId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

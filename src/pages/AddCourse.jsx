@@ -25,7 +25,7 @@ const AddCourse = () => {
     setLoading(true);
     setError(null);
     try {
-      await axios.post("http://localhost:5000/api/courses/add", course, {
+      await axios.post("https://backend-ruby-five-72.vercel.app/api/courses/add", course, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Course added successfully");

@@ -11,10 +11,10 @@ const EnrolledStudents = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/enrollment/all-enrollments");
+        const response = await axios.get("https://backend-ruby-five-72.vercel.app/api/enrollment/all-enrollments");
         const studentsData = await Promise.all(
           response.data.map(async (student) => {
-            const studentDetails = await axios.get(`http://localhost:5000/api/courses/student/${student.student}`);
+            const studentDetails = await axios.get(`https://backend-ruby-five-72.vercel.app/api/courses/student/${student.student}`);
             return { ...student, studentName: studentDetails.data.name };
           })
         );

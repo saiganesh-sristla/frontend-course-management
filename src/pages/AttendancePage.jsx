@@ -15,7 +15,7 @@ const AttendancePage = () => {
     const fetchAttendance = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/attendance/${studentId}/${courseId}`
+          `https://backend-ruby-five-72.vercel.app/api/attendance/${studentId}/${courseId}`
         );
         if (response.data.attendance) {
           setPercent(response.data.attendance.percent);
@@ -31,8 +31,8 @@ const AttendancePage = () => {
 
   useEffect(() => {
     const fetchNames = async () => {
-        const response = await axios.get(`http://localhost:5000/api/courses/${courseId}`)
-        const response2 = await axios.get(`http://localhost:5000/api/courses/student/${studentId}`)
+        const response = await axios.get(`https://backend-ruby-five-72.vercel.app/api/courses/${courseId}`)
+        const response2 = await axios.get(`https://backend-ruby-five-72.vercel.app/api/courses/student/${studentId}`)
         console.log(response.data)
         console.log(response2.data)
         setCourseName(response.data.title)
@@ -48,7 +48,7 @@ const AttendancePage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/attendance",
+        "https://backend-ruby-five-72.vercel.app/api/attendance",
         {
           student: studentId,
           course: courseId,

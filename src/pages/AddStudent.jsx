@@ -14,7 +14,7 @@ const AddStudent = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "https://backend-ruby-five-72.vercel.app/api/auth/signup",
         { name, email, password, role: "student" },
         {
           headers: { Authorization: `Bearer ${token}` },

@@ -14,13 +14,13 @@ const CourseDetails = () => {
   useEffect(() => {
     const fetchCourseDetails = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/courses/${id}`, {
+        const res = await axios.get(`https://backend-ruby-five-72.vercel.app/api/courses/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCourse(res.data);
 
         const attendanceRes = await axios.get(
-          `http://localhost:5000/api/attendance/${id}`,
+          `https://backend-ruby-five-72.vercel.app/api/attendance/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setAttendance(attendanceRes.data.attendance.percent);
@@ -37,7 +37,7 @@ const CourseDetails = () => {
   const handleDownloadCertificate = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/certificates/download/${id}`,
+        `https://backend-ruby-five-72.vercel.app/api/certificates/download/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
           responseType: "blob", // Ensure we get the file as a Blob

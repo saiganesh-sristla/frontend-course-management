@@ -12,7 +12,7 @@ const Students = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resStudents = await axios.get("http://localhost:5000/api/courses/all-students", {
+        const resStudents = await axios.get("https://backend-ruby-five-72.vercel.app/api/courses/all-students", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setStudents(resStudents.data);
@@ -27,7 +27,7 @@ const Students = () => {
   const handleDeleteStudent = async (id) => {
     if (!window.confirm("Are you sure you want to delete this student?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/courses/delete/student/${id}`, {
+      await axios.delete(`https://backend-ruby-five-72.vercel.app/api/courses/delete/student/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setStudents(students.filter(student => student._id !== id));

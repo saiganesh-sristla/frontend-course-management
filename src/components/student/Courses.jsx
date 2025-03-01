@@ -15,11 +15,11 @@ const Courses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const enrolledRes = await axios.get("http://localhost:5000/api/enrollment/my-courses", {
+        const enrolledRes = await axios.get("https://backend-ruby-five-72.vercel.app/api/enrollment/my-courses", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
-        const availableRes = await axios.get("http://localhost:5000/api/courses/available", {
+        const availableRes = await axios.get("https://backend-ruby-five-72.vercel.app/api/courses/available", {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log(enrolledRes.data);
@@ -40,7 +40,7 @@ const Courses = () => {
     setEnrolling(true);
     try {
       await axios.post(
-        "http://localhost:5000/api/enrollment/enroll",
+        "https://backend-ruby-five-72.vercel.app/api/enrollment/enroll",
         { courseId: selectedCourse._id },
         { headers: { Authorization: `Bearer ${token}` } }
       );
