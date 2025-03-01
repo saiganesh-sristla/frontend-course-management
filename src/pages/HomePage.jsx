@@ -91,7 +91,7 @@ const HomePage = () => {
               </h1>
               <p className="text-lg md:text-xl mb-8 text-indigo-100">A seamless platform that provides co-curricular courses.</p>
               <div className="flex flex-col justify-center sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="/login" className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-indigo-100 transition text-center">Get Started</a>
+                <a href="/login1" className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-indigo-100 transition text-center">Get Started</a>
               </div>
             </div>
           </div>
