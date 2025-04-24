@@ -37,7 +37,7 @@ const CourseDetails = () => {
   const handleDownloadCertificate = async () => {
     try {
       const response = await axios.get(
-        `https://backend-ruby-five-72.vercel.app/api/certificates/download/${id}`,
+        `http://localhost:5000/api/certificates/download/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
           responseType: "blob", // Ensure we get the file as a Blob

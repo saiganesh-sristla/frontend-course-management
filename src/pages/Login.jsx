@@ -86,10 +86,10 @@ const Login = () => {
               </motion.button>
             </form>
             <p className="mt-6 text-center text-gray-600">
-              Don't have an account?{" "}
-              <Link to="/signup" className="text-blue-500 hover:text-blue-600 font-medium transition duration-200">
-                contact admin
-              </Link>
+              admin@gmail.com - admin123{" "}
+            </p>
+            <p className="mt-6 text-center text-gray-600">
+              Only students added by admin can login to the system{" "}
             </p>
           </motion.div>
         </div>
